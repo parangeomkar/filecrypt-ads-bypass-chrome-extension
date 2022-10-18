@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Filecrypt AD redirect bypass",
+  "version": "1.0.0",
+  "background": {
+	"scripts": ["jquery.js","background.js"]
+  },
+  "permissions": [  
+		"activeTab",
+		"http:///",
+		"https:///"
+    ], 
+  "content_scripts": [
+    {
+      "matches": [
+        "https://filecrypt.co/*"
+      ],
+      "js": ["jquery.js","content.js"]
+    }
+  ]
+}
